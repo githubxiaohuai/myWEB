@@ -57,6 +57,20 @@
             font-family:"Arial";
             position:relative;
         }
+        .topnav .nav li a.active{
+            color:#01a78f;
+
+        }.topnav .nav li a.active:after{
+            content: "";
+            height: 5px;
+            background: #01a78f;
+            position: absolute;
+            top: 95%;
+            left: 50%;
+            left: 0%;
+            width: 100%;
+        }
+
         .topnav .nav li a:after{
             content: "";
             width: 0;
@@ -67,6 +81,7 @@
             left: 50%;
             transition: all .2s;
         }
+
         .topnav .nav li a:hover:after{
             left: 0%;
             width: 100%;
@@ -119,6 +134,16 @@
 
         }
 
+        @keyframes liIN{
+            0%{
+                transform:translate(-800px,0);
+                opacity:0;
+            }
+            100%{
+                transform:translate(0,0);
+                opacity:1;
+            }
+        }
         .info-l ul{
             color:#fff;
             border-top:1px solid rgba(255, 255, 255, 0.6);
@@ -132,7 +157,41 @@
             list-style:none;
              font-size:1.2vw;
              padding:3% 0;
+             animation:liIN 1.2s;
         }
+        .info-l ul li:nth-child(1){
+            animation-delay:0.05s;
+            -webkit-animation-delay:0.05s;
+        }
+        .info-l ul li:nth-child(2){
+            animation-delay:0.1s;
+            -webkit-animation-delay:0.1s;
+        }
+        .info-l ul li:nth-child(3){
+            animation-delay:0.15s;
+            -webkit-animation-delay:0.15s;
+        }
+        .info-l ul li:nth-child(4){
+            animation-delay:0.2s;
+            -webkit-animation-delay:0.2s;
+        }
+        .info-l ul li:nth-child(5){
+            animation-delay:0.22s;
+            -webkit-animation-delay:0.22s;
+        }
+        .info-l ul li:nth-child(6){
+            animation-delay:0.25s;
+            -webkit-animation-delay:0.25s;
+        }
+        .info-l ul li:nth-child(7){
+            animation-delay:0.27s;
+            -webkit-animation-delay:0.27s;
+        }
+        .info-l ul li:nth-child(8){
+            animation-delay:0.27s;
+            -webkit-animation-delay:0.3s;
+        }
+
         .info-l ul li a{
            color:#fff;
            text-decoration:none;
@@ -149,12 +208,60 @@
             padding:50px;
             width:40%;
             float: right;
-            border:5px solid #fff;
             height: 80%;
             text-align:center;
             box-sizing:border-box;
             border-radius:15px;
+            position:relative;
         }
+
+        @keyframes lineIN1{
+            0%{
+                transform:translate(0,800px);
+                opacity:0;
+            }
+            100%{
+                transform:translate(0,0);
+                opacity:1;
+            }
+        }
+        @keyframes lineIN2{
+            0%{
+                transform:translate(800px,0);
+                opacity:0;
+            }
+            100%{
+                transform:translate(0,0);
+                opacity:1;
+            }
+        }
+        @keyframes textIN1{
+            0%{
+                transform:translate(0,-20px);
+                opacity:0;
+            }
+            100%{
+                transform:translate(0,0);
+                opacity:1;
+            }
+        }
+        @keyframes textIN2{
+            0%{
+               transform:translate(0,40px);
+                opacity:0;
+            }
+            100%{
+                transform:translate(0,0);
+                opacity:1;
+            }
+        }
+
+        .info-r .div1{border-top:2px solid #fff;border-bottom:2px solid #fff;width:100%;height:90%;position:absolute;top:5%;left:0%;animation:lineIN2 0.8s;-webkit-animation:lineIN2 0.8s;}
+        .info-r .div2{border-left:2px solid #fff;border-right:2px solid #fff;width:90%;height:100%;position:absolute;top:0%;left:5%;animation:lineIN1 0.8s;-webkit-animation:lineIN1 0.8s;}
+
+        .info-r h1{animation:textIN1 1.5s;-webkit-animation:textIN1 1.5s;}
+        .info-r h2{animation:textIN2 1.5s;-webkit-animation:textIN2 1.5s;}
+
         .personPIC{
             color:#fff;
 
@@ -173,13 +280,7 @@
         <div class="topnav">
             <div class="logo">C-Huaibin</div>
             <ul class="nav">
-             <!--     <li><a href="">主页</a></li>
-                <li><a href="">了解我</a></li>
-                <li><a href="">我会的</a></li>
-                <li><a href="">我做过</a></li>
-                <li><a href="">我骄傲</a></li>
-                <li><a href="">联系我</a></li> -->
-                <li><a href="">HOME</a></li>
+                <li><a href="" class="active">HOME</a></li>
                 <li><a href="">ABOUT</a></li>
                 <li><a href="">SKILLS</a></li>
                 <li><a href="">EXPERIENCE</a></li>
@@ -203,6 +304,8 @@
                 </ul>
             </div>
             <div class="info-r">
+            <div class="div1"></div>
+            <div class="div2"></div>
                 <div class="personPIC">
                     <img src="img/pic3.png">
                     <h1>Web 前端工程师</h1>
