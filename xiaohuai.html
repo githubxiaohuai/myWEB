@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>小怀</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+
+          @font-face {
+            font-family: 'DKJambo';
+            src: url('./fonts/DKJambo.eot'); /* IE9 Compat Modes */
+            src: url('./fonts/DKJambo.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                     url('./fonts/DKJambo.woff') format('woff'), /* Modern Browsers */
+                     url('./fonts/DKJambo.ttf')  format('truetype'), /* Safari, Android, iOS */
+                     url('./fonts/DKJambo.svg#DKJambo') format('svg'); /* Legacy iOS */
+           }
+
+
+        .firstPanle{
+            position:relative;
+            width:100%;
+            background:url('./img/bg.jpg');
+            height:0;
+            padding-bottom:50%;
+            overflow:hidden;
+            background-position:50%;
+            background-repeat:no-repeat;
+            background-size:cover;
+            /* -webkit-filter: blur(2px);
+            -moz-filter: blur(2px);
+            -o-filter: blur(2px);
+            -ms-filter: blur(2px);
+            filter: blur(2px); */
+        }
+        .topnav{
+            box-sizing:border-box;
+            position:absolute;
+            width:100%;
+            padding:0 10%;
+        }
+        .topnav .nav{
+            float: right;
+            overflow:hidden;
+            margin-top:50px;
+        }
+        .topnav .nav li{
+            float: left;
+            list-style:none;
+            margin-right:20px;
+        }
+        .topnav .nav li a{
+            padding:5px 0;
+            display:inline-block;
+            text-decoration:none;
+            color:#fff;
+            font-size:26px;
+            font-family:"Arial";
+            position:relative;
+        }
+        .topnav .nav li a:after{
+            content: "";
+            width: 0;
+            height: 5px;
+            background: #fff;
+            position: absolute;
+            top: 95%;
+            left: 50%;
+            transition: all .2s;
+        }
+        .topnav .nav li a:hover:after{
+            left: 0%;
+            width: 100%;
+        }
+        .logo{
+            float: left;
+            font-size:76px;
+            margin-top:26px;
+            font-family: 'DKJambo';
+            color:#fff;
+        }
+
+        .info{
+            border-radius:20px;
+            position:absolute;
+            width:80%;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            height:70%;
+            background:transparent url('./img/transparent2.png');
+            padding:4% 8% 0;
+            box-sizing:border-box;
+        }
+
+        .info-l{
+            width:35%;
+            float: left;
+        }
+        .info-l h1{
+            text-align:center;
+            padding:12px 0 5px 0;
+            color:#fff;
+            font-family:"华文新魏";
+            width:120px;
+            background:#01a78f;
+            font-size:24px;
+            border-radius:5px;
+            position:relative;
+        }
+        .info-l h1:after{
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #01a78f;
+            content: "";
+            position: absolute;
+            width: 0;
+            bottom:-10px;
+            left:30px;
+
+        }
+
+        .info-l ul{
+            color:#fff;
+            border-top:1px solid rgba(255, 255, 255, 0.6);
+            padding:20px 0 0 0;
+        }
+        .info-l h2{
+            color:#fff;
+
+        }
+        .info-l ul li{
+            list-style:none;
+             font-size:1.2vw;
+             padding:3% 0;
+        }
+        .info-l ul li a{
+           color:#fff;
+           text-decoration:none;
+        }
+        .info-l ul li a:hover{
+           text-decoration:underline;
+        }
+        .info-l ul li span{
+            font-weight:bold;
+        }
+
+        .info-r{
+            margin-top:3%;
+            padding:50px;
+            width:40%;
+            float: right;
+            border:5px solid #fff;
+            height: 80%;
+            text-align:center;
+            box-sizing:border-box;
+            border-radius:15px;
+        }
+        .personPIC{
+            color:#fff;
+
+        }
+        .personPIC img{
+            width:70%;
+            margin:0;
+            padding:0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="firstPanle">
+        <!-- <div class="bgblur"></div> -->
+        <div class="topnav">
+            <div class="logo">C-Huaibin</div>
+            <ul class="nav">
+             <!--     <li><a href="">主页</a></li>
+                <li><a href="">了解我</a></li>
+                <li><a href="">我会的</a></li>
+                <li><a href="">我做过</a></li>
+                <li><a href="">我骄傲</a></li>
+                <li><a href="">联系我</a></li> -->
+                <li><a href="">HOME</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">SKILLS</a></li>
+                <li><a href="">EXPERIENCE</a></li>
+                <li><a href="">HONOR</a></li>
+                <li><a href="">CONCAT</a></li>
+            </ul>
+        </div>
+        <div class="info">
+            <div class="info-l">
+                <h1>Hi  !</h1>
+                <h2>Nice to meet you!</h2>
+                <ul>
+                    <li><span>姓名：</span>蔡怀彬</li>
+                    <li><span>学历：</span>本科</li>
+                    <li><span>专业：</span>数字媒体技术</li>
+                    <li><span>籍贯：</span>广东潮州</li>
+                    <li><span>电话：</span>188-2613-7866</li>
+                    <li><span>邮箱：</span>775061360@qq.com</li>
+                    <li><span>博客：</span><a href="http://www.cnblogs.com/xiaohuai">www.cnblogs.com/xiaohuai</a></li>
+                    <li><span>Github：</span><a href="https://github.com/githubxiaohuai">github.com/githubxiaohuai</a></li>
+                </ul>
+            </div>
+            <div class="info-r">
+                <div class="personPIC">
+                    <img src="img/pic3.png">
+                    <h1>Web 前端工程师</h1>
+                    <h2>越努力,越幸运</h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="myIntro"></div>
+    <div class="mySkills"></div>
+    <div class="experience"></div>
+    <div class="myhonor"></div>
+    <div class="friends">make a friend</div>
+</body>
+</html>
