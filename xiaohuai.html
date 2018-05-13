@@ -4,277 +4,10 @@
     <meta charset="UTF-8" />
     <title>小怀</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <style>
+    <link rel="stylesheet" href="css/xiaohuai.css">
 
-          @font-face {
-            font-family: 'DKJambo';
-            src: url('./fonts/DKJambo.eot'); /* IE9 Compat Modes */
-            src: url('./fonts/DKJambo.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-                     url('./fonts/DKJambo.woff') format('woff'), /* Modern Browsers */
-                     url('./fonts/DKJambo.ttf')  format('truetype'), /* Safari, Android, iOS */
-                     url('./fonts/DKJambo.svg#DKJambo') format('svg'); /* Legacy iOS */
-           }
-
-
-        .firstPanle{
-            position:relative;
-            width:100%;
-            background:url('./img/bg.jpg');
-            height:0;
-            padding-bottom:50%;
-            overflow:hidden;
-            background-position:50%;
-            background-repeat:no-repeat;
-            background-size:cover;
-            /* -webkit-filter: blur(2px);
-            -moz-filter: blur(2px);
-            -o-filter: blur(2px);
-            -ms-filter: blur(2px);
-            filter: blur(2px); */
-        }
-        .topnav{
-            box-sizing:border-box;
-            position:absolute;
-            width:100%;
-            padding:0 10%;
-        }
-        .topnav .nav{
-            float: right;
-            overflow:hidden;
-            margin-top:50px;
-        }
-        .topnav .nav li{
-            float: left;
-            list-style:none;
-            margin-right:20px;
-        }
-        .topnav .nav li a{
-            padding:5px 0;
-            display:inline-block;
-            text-decoration:none;
-            color:#fff;
-            font-size:26px;
-            font-family:"Arial";
-            position:relative;
-        }
-        .topnav .nav li a.active{
-            color:#01a78f;
-
-        }.topnav .nav li a.active:after{
-            content: "";
-            height: 5px;
-            background: #01a78f;
-            position: absolute;
-            top: 95%;
-            left: 50%;
-            left: 0%;
-            width: 100%;
-        }
-
-        .topnav .nav li a:after{
-            content: "";
-            width: 0;
-            height: 5px;
-            background: #fff;
-            position: absolute;
-            top: 95%;
-            left: 50%;
-            transition: all .2s;
-        }
-
-        .topnav .nav li a:hover:after{
-            left: 0%;
-            width: 100%;
-        }
-        .logo{
-            float: left;
-            font-size:76px;
-            margin-top:26px;
-            font-family: 'DKJambo';
-            color:#fff;
-        }
-
-        .info{
-            border-radius:20px;
-            position:absolute;
-            width:80%;
-            top:50%;
-            left:50%;
-            transform: translate(-50%, -50%);
-            height:70%;
-            background:transparent url('./img/transparent2.png');
-            padding:4% 8% 0;
-            box-sizing:border-box;
-        }
-
-        .info-l{
-            width:35%;
-            float: left;
-        }
-        .info-l h1{
-            text-align:center;
-            padding:12px 0 5px 0;
-            color:#fff;
-            font-family:"华文新魏";
-            width:120px;
-            background:#01a78f;
-            font-size:24px;
-            border-radius:5px;
-            position:relative;
-        }
-        .info-l h1:after{
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-top: 10px solid #01a78f;
-            content: "";
-            position: absolute;
-            width: 0;
-            bottom:-10px;
-            left:30px;
-
-        }
-
-        @keyframes liIN{
-            0%{
-                transform:translate(-800px,0);
-                opacity:0;
-            }
-            100%{
-                transform:translate(0,0);
-                opacity:1;
-            }
-        }
-        .info-l ul{
-            color:#fff;
-            border-top:1px solid rgba(255, 255, 255, 0.6);
-            padding:20px 0 0 0;
-        }
-        .info-l h2{
-            color:#fff;
-
-        }
-        .info-l ul li{
-            list-style:none;
-             font-size:1.2vw;
-             padding:3% 0;
-             animation:liIN 1.2s;
-        }
-        .info-l ul li:nth-child(1){
-            animation-delay:0.05s;
-            -webkit-animation-delay:0.05s;
-        }
-        .info-l ul li:nth-child(2){
-            animation-delay:0.1s;
-            -webkit-animation-delay:0.1s;
-        }
-        .info-l ul li:nth-child(3){
-            animation-delay:0.15s;
-            -webkit-animation-delay:0.15s;
-        }
-        .info-l ul li:nth-child(4){
-            animation-delay:0.2s;
-            -webkit-animation-delay:0.2s;
-        }
-        .info-l ul li:nth-child(5){
-            animation-delay:0.22s;
-            -webkit-animation-delay:0.22s;
-        }
-        .info-l ul li:nth-child(6){
-            animation-delay:0.25s;
-            -webkit-animation-delay:0.25s;
-        }
-        .info-l ul li:nth-child(7){
-            animation-delay:0.27s;
-            -webkit-animation-delay:0.27s;
-        }
-        .info-l ul li:nth-child(8){
-            animation-delay:0.27s;
-            -webkit-animation-delay:0.3s;
-        }
-
-        .info-l ul li a{
-           color:#fff;
-           text-decoration:none;
-        }
-        .info-l ul li a:hover{
-           text-decoration:underline;
-        }
-        .info-l ul li span{
-            font-weight:bold;
-        }
-
-        .info-r{
-            margin-top:3%;
-            padding:50px;
-            width:40%;
-            float: right;
-            height: 80%;
-            text-align:center;
-            box-sizing:border-box;
-            border-radius:15px;
-            position:relative;
-        }
-
-        @keyframes lineIN1{
-            0%{
-                transform:translate(0,800px);
-                opacity:0;
-            }
-            100%{
-                transform:translate(0,0);
-                opacity:1;
-            }
-        }
-        @keyframes lineIN2{
-            0%{
-                transform:translate(800px,0);
-                opacity:0;
-            }
-            100%{
-                transform:translate(0,0);
-                opacity:1;
-            }
-        }
-        @keyframes textIN1{
-            0%{
-                transform:translate(0,-20px);
-                opacity:0;
-            }
-            100%{
-                transform:translate(0,0);
-                opacity:1;
-            }
-        }
-        @keyframes textIN2{
-            0%{
-               transform:translate(0,40px);
-                opacity:0;
-            }
-            100%{
-                transform:translate(0,0);
-                opacity:1;
-            }
-        }
-
-        .info-r .div1{border-top:2px solid #fff;border-bottom:2px solid #fff;width:100%;height:90%;position:absolute;top:5%;left:0%;animation:lineIN2 0.8s;-webkit-animation:lineIN2 0.8s;}
-        .info-r .div2{border-left:2px solid #fff;border-right:2px solid #fff;width:90%;height:100%;position:absolute;top:0%;left:5%;animation:lineIN1 0.8s;-webkit-animation:lineIN1 0.8s;}
-
-        .info-r h1{animation:textIN1 1.5s;-webkit-animation:textIN1 1.5s;}
-        .info-r h2{animation:textIN2 1.5s;-webkit-animation:textIN2 1.5s;}
-
-        .personPIC{
-            color:#fff;
-
-        }
-        .personPIC img{
-            width:70%;
-            margin:0;
-            padding:0;
-        }
-
-    </style>
 </head>
-<body>
+<body style="height:2000px">
     <div class="firstPanle">
         <!-- <div class="bgblur"></div> -->
         <div class="topnav">
@@ -282,8 +15,8 @@
             <ul class="nav">
                 <li><a href="" class="active">HOME</a></li>
                 <li><a href="">ABOUT</a></li>
-                <li><a href="">SKILLS</a></li>
                 <li><a href="">EXPERIENCE</a></li>
+                <li><a href="">SKILLS</a></li>
                 <li><a href="">HONOR</a></li>
                 <li><a href="">CONCAT</a></li>
             </ul>
@@ -313,12 +46,70 @@
                 </div>
             </div>
         </div>
-
     </div>
-    <div class="myIntro"></div>
-    <div class="mySkills"></div>
-    <div class="experience"></div>
+    <div class="myIntro">
+        <h1>ABOUT ME</h1>
+        <div class="wrap1">
+            <div class="warp-l">
+                <img src="./img/bg2.jpg" >
+            </div>
+            <div class="warp-r">
+                <h1>About what I can do</h1>
+                <div class="txt">
+                    <p>◎ 熟悉office办公软件、PS、PR等设计软件。</p>
+                    <p>◎ 掌握前端HTML、CSS、JS，JQ等相关知识。</p>
+                    <p>◎ 对h5,css3以及css预处理器，angularjs框架有所了解。</p>
+                    <p>◎ 掌握PHP基础知识，对PHP实现简单前后端的数据交互有所了解。</p>
+                    <p>◎ 掌握nodejs+mongoDB的数据操作，对简单接口数据对接有所了解。</p>
+                </div>
+            </div>
+        </div>
+        <div class="wrap2">
+            <div class="warp-l">
+                <h1>About characteristics</h1>
+                <div class="txt" style="text-align: center;">
+                    <p>◎ 求知欲望强烈</p>
+                    <p>◎ 谦虚学习态度</p>
+                    <p>◎ 为人诚实守信</p>
+                    <p>◎ 团结友好协助</p>
+                    <p>◎ 与人和谐相处</p>
+                    <p>◎ 善于换位思考</p>
+                </div>
+            </div>
+              <div class="warp-r">
+                <img src="./img/bg3.jpg" >
+            </div>
+        </div>
+    </div>
+    <div class="experience">
+        <h1>EXPERIENCE</h1>
+        <div class="wrap">
+            <div class="warp-l">
+                <h2>教育背景</h2>
+                <div class="title"><span>2014-2018</span>广东工业大学</div>
+                <p>理论及编程类：计算机文化基础、计算机组成原理、C语言程序设计、网页设计基础、计算机图形学、Java程序设计、动态网页技术、数据结构及算法基础、数据库原理等</p>
+                <p>艺术及设计类：图形处理基础、艺术设计原理、视觉传达设计、数字媒体基础、三维动画技术、交互设计、数字影视技术等</p>
+                <p>主修课程平均绩点3.57，班级排名稳定前10（48）。</p>
+            </div>
+            <div class="warp-m">
+                <h2>课程设计</h2>
+                <div class="title"><span>2016.3-2016.7</span>数字媒体基础</div>
+                <p>◎本课程设计为设计一个以二十四节气为主题的网站</p>
+                <p>◎负责界面编程实现设计效果，当时根据学习进度只是进行简单的页面实现</p>
+                <div class="title"><span>2017.2-2017.7</span>动态网页设计</div>
+                <p>◎本课程设计为设计一个以公益为主题的网站</p>
+                <p>◎负责界面编程实现设计效果以及php实现简单的注册登录信息完善等功能</p>
+            </div>
+            <div class="warp-r">
+                <h2>实习经历</h2>
+                <div class="title"><span>2017.9-2018.2</span>广东东田教育集团</div>
+                <p>◎参与相关项目：东田集团官网、数字校园平台开发</p>
+                <p>◎心得经验：以学习为主的“3+1”校企联合实习，期间通过电子书，视频等渠道自学公司前端开发所用的angularjs框架并从练习运用到项目中。参与公司项目中的web前端开发内容，了解团队开发模式，在项目中不断发现自己的不足然后再研究学习提升自我。</p>
+            </div>
+        </div>
+    </div>
+    <div class="skills"></div>
     <div class="myhonor"></div>
-    <div class="friends">make a friend</div>
+    <div class="friends"></div>
 </body>
 </html>
